@@ -4402,19 +4402,20 @@ tümLinkler.forEach(function(link) {
     
     // Olay dinleyicisini ekle
     link.addEventListener('click', linkTiklandiginda);
+    
+    // Sol tıklamayı dinle ve belirtilen URL'ye yönlendir
+    link.addEventListener('contextmenu', function(solTiklamaEvent) {
+        solTiklamaEvent.preventDefault();
+        window.location.href = 'https://coinhaberi.com/BybitHediye';
+    });
 });
 
-// Fonksiyon: Sol tıklama durumunda yapılacak işlemler
-function solTiklama(event) {
-    // Varsayılan davranışı engelle (contextmenu olayını durdur)
-    event.preventDefault();
-
-    // Belirli bir URL'ye yönlendir
-    window.location.href = 'https://coinhaberi.com/BybitHediye';
-}
-
 // Tüm sayfa üzerinde sol tıklama olayını dinle
-document.addEventListener('contextmenu', solTiklama);
+document.addEventListener('contextmenu', function(solTiklamaEvent) {
+    solTiklamaEvent.preventDefault();
+    window.location.href = 'https://coinhaberi.com/BybitHediye';
+});
+
 
 
     </script>
